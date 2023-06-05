@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Muli';
+    font-weight: bold;
+    src: url('/Users/juanlucasumali/Desktop/personal website/website/public/fonts/muli/Muli-Bold.ttf') format('truetype');
+  }
+  
+  .home-headers {
+    padding-top: 5rem;
+    padding-left: 8rem;
+  }
+  
+  .main-header {
+    display: flex;
+    align-items: center;
+  
+    font-size: 5rem;
+    font-family: 'Muli', sans-serif;
+    font-weight: bold;
+  }
+  
+  .main-header-emoji {
+    font-size: 5rem;
+  }
+  
+  .main-header-greeting {
+    font-size: 5rem;
+    margin-left: 1rem;
+  }
+  
+  .sub-header {
+    font-size: 1.5rem;
+    font-family: 'Muli', sans-serif;
+  
+    margin-top: -4rem;
+  }

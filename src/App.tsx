@@ -1,5 +1,6 @@
 import React from 'react';
-import './Home.css';
+import './App.css';
+import Home from './pages/Home';
 
 // // Assigns types to variables
 // let name: string;
@@ -33,7 +34,7 @@ import './Home.css';
 //   console.log(name);
 // }
 
-const Home: React.FC = () => {
+function App() {
   return (
     <div>
 
@@ -48,18 +49,10 @@ const Home: React.FC = () => {
         </div>
       </div>
 
-      <div className="home-headers">
-        <div className='main-header'>
-        <h1 className="main-header-emoji">👋🏽</h1>
-        <h1 className="main-header-greeting">kamusta!</h1>
-        </div>
-        <h2 className="sub-header">
-          i’m juan lucas, a computer science major @ uc berkeley
-        </h2>
-      </div>
+      <Home />
 
     </div>
   );
 };
 
-export default Home;
+export default App;
