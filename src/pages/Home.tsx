@@ -1,4 +1,7 @@
 import "./Home.css"
+import { ReactComponent as Linkedin } from '../media/linkedin.svg';
+import { ReactComponent as Github } from '../media/github.svg';
+import { ReactComponent as Instagram } from '../media/instagram.svg';
 
 const Home: React.FC = () => {
     return (
@@ -23,12 +26,11 @@ const Home: React.FC = () => {
           <h2 className="sub-header">
             i’m juan lucas, a computer science major @ uc berkeley
           </h2>
-        </div>
-
-        <div className="socials">
-            <div className="linkedin"></div>
-            <div className="github"></div>
-            <div className="instagram"></div>
+          <div className="socials">
+            <a href="https://www.linkedin.com/in/juanlucasumali/" target="_blank"><Linkedin className="linkedin" /></a>
+            <a href="https://github.com/juanlucasumali/" target="_blank"><Github className="github" /></a>
+            <a href="https://www.instagram.com/juanlucasumali/" target="_blank"><Instagram className="instagram" /></a>
+          </div>
         </div>
   
       </div>
