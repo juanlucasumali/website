@@ -1,0 +1,84 @@
+/* 
+BACKGROUND
+*/
+.background {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-color: white;
+  }
+  
+  .orbits {
+    transform: translate(20rem, 30rem)
+  }
+
+  .outer-orbit {
+    position: absolute;
+    transform: translate(-50%, -50%) rotate(322deg);
+    width: 50rem;
+    height: 70rem;
+    border-radius: 50%;
+    border: 1px solid #e0e0e0;
+  }
+  
+  .inner-orbit {
+    position: absolute;
+    transform: translate(-50%, -50%) rotate(322deg);
+    width: 30rem;
+    height: 50rem;
+    border-radius: 50%;
+    border: 1px solid #e0e0e0;
+  }
+
+
+
+
+
+  
+
+
+
+
+/* 
+HOME PAGE
+*/
+@font-face {
+    font-family: 'Muli';
+    font-weight: bold;
+    src: url('../public/fonts/muli/Muli-Bold.ttf') format('truetype');
+  }
+
+.home-headers {
+    padding-top: 1rem;
+    padding-left: 5rem;
+  }
+  
+.main-header {
+    display: flex;
+    align-items: center;
+
+    font-size: 5rem;
+    font-family: 'Muli', sans-serif;
+    font-weight: bold;
+  }
+  
+.main-header-emoji {
+    font-size: 5rem;
+}
+
+.main-header-greeting {
+    font-size: 5rem;
+    margin-left: 1rem;
+}
+
+.sub-header {
+    font-size: 1.5rem;
+    font-family: 'Muli', sans-serif;
+
+    margin-top: -4rem;
+  }
