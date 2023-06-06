@@ -34,13 +34,13 @@ const Home: React.FC = () => {
                 3000,
                 ", a computer science major @ uc berkeley",
                 1000, 
-                ", an enthusiast in books, movies, art, and music", 
+                ", an enthusiast in all things art", 
                 2000, 
                 ", a proud pinoy 🇵🇭", 
                 2000, 
                 ", a",
                 500,
-                ", and it's so nice to meet you! :)",
+                ", and it's so nice to meet you :)",
               ]}
               cursor={true}
               deletionSpeed={90}

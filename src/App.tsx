@@ -1,7 +1,11 @@
 import './App.css';
 import Home from './pages/Home';
+import CS from './pages/CS';
+import Art from './pages/Art';
 
 import * as React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -18,7 +22,11 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
 const drawerWidth = 240;
-const navItems = ['👋🏽', '💻', '🎞'];
+const navItems = [
+  { text: '👋🏽', link: '/' },
+  { text: '💻', link: '/cs' },
+  { text: '🎞', link: '/art' },
+];
 
 function App() {
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -31,12 +39,12 @@ function App() {
     <Box onClick={handleDrawerToggle}>
       <List>
         {navItems.map((item) => (
-          <ListItem key={item}>
+          <ListItem key={item.link} component={Link} to={item.link}>
             <ListItemButton>
               <ListItemText
                 primary={
                   <Typography variant="h6" sx={{ fontSize: 30, textAlign: 'center'}}>
-                    {item}
+                    {item.text}
                   </Typography>
                 }
               />
@@ -48,20 +56,20 @@ function App() {
   );
 
   return (
-    <div>
+    <Router>
       <CssBaseline />
       <AppBar position="fixed" sx={{ backgroundColor: 'transparent', boxShadow: 'none', right: 0 }}>
         <Toolbar sx={{ justifyContent: 'flex-end' }}>
-        <div className='menu-icon'>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="end"
-            onClick={handleDrawerToggle}
-            sx={{ ml: 2, color: '#212121' }}
-          >
-            <MenuIcon />
-          </IconButton>
+          <div className='menu-icon'>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="end"
+              onClick={handleDrawerToggle}
+              sx={{ ml: 2, color: '#212121' }}
+            >
+              <MenuIcon />
+            </IconButton>
           </div>
         </Toolbar>
       </AppBar>
@@ -85,9 +93,13 @@ function App() {
         {drawer}
       </Drawer>
       <Box component="main" sx={{ p: 3 }}>
-        <Home />
+      <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/cs" element={<CS />} />
+          <Route path="/art" element={<Art />} />
+        </Routes>
       </Box>
-    </div>
+    </Router>
   );
 }
 
