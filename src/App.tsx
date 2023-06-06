@@ -52,6 +52,7 @@ function App() {
       <CssBaseline />
       <AppBar position="fixed" sx={{ backgroundColor: 'transparent', boxShadow: 'none', right: 0 }}>
         <Toolbar sx={{ justifyContent: 'flex-end' }}>
+        <div className='menu-icon'>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -61,6 +62,7 @@ function App() {
           >
             <MenuIcon />
           </IconButton>
+          </div>
         </Toolbar>
       </AppBar>
       <Drawer
