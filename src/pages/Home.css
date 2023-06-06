@@ -10,6 +10,26 @@
     src: url('/Users/juanlucasumali/Desktop/personal website/website/public/fonts/circular-std-font-family/CircularStd-Book.ttf') format('truetype');
   }
 
+  @keyframes fadeInUp {
+    0% {
+      transform: translateY(5%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
   .home-page {
     display: flex;
     align-items: center;
@@ -19,6 +39,7 @@
   .home-headers {
     margin-top: -4rem;
     padding-left: 8rem;
+    animation: 1.5s fadeInUp
   }
   
   .main-header {
@@ -78,44 +99,24 @@
     background-color: white;
   }
   
-  .orbits {
-    transform: translate(-300px, 200px);
-    scale: 130%;
+  .background {
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-color: white;
+
+    animation: 3s fadeIn;
   }
 
-  .orbits-animator {
-    width: 1000px;
-    height: 1000px;
-    transform: translate(0px, 0px) rotate(-310deg);
-    fill: white;
-    stroke: #e0e0e0;
-    stroke-width: 1;
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 2000;
-    animation: rotate 10s linear infinite;
-    animation-iteration-count: infinite;
-    z-index: -1;
+  .orbits {
+    transform: translate(280px, 550px);
   }
-  
-  .outer-orbit-1 {
-    border-radius: 50%;
-    border: 1px solid #e0e0e0;
-    transform: translate(500px, 350px);
-    z-index: -3;
-  }
-  
-  .inner-orbit-1 {
-    border-radius: 50%;
-    border: 1px solid #e0e0e0;
-    transform: translate(500px, 350px);
-  }
-  
-  @keyframes rotate {
-    to {
-      stroke-dashoffset: 0;
-    }
-  }
-  
+
   .outer-orbit {
     position: absolute;
     transform: translate(-50%, -50%) rotate(322deg);
@@ -124,8 +125,8 @@
     border-radius: 50%;
     border: 1px solid #e0e0e0;
   }
-  
-  
+
+
   .inner-orbit {
     position: absolute;
     transform: translate(-50%, -50%) rotate(322deg);
@@ -134,11 +135,11 @@
     border-radius: 50%;
     border: 1px solid #e0e0e0;
   }
-  
+
   .saturn {
-    transform: translate(1150px, -600px)
+    transform: translate(1150px, 350px)
   }
-  
+
   .saturn-body {
     position: absolute;
     top: 50%;
@@ -150,10 +151,10 @@
     border: 1px solid #e0e0e0;
     background-color: transparent;
     background-image: linear-gradient(to bottom, #fff 50%, transparent 0);
-  
+
     z-index: 3;
   }
-  
+
   .saturn-ring-animator {
     width: 600px;
     height: 160px;
@@ -167,13 +168,13 @@
     animation-iteration-count: infinite;
     z-index: -1;
   }
-  
+
   .saturn-ring {
     border-radius: 50%;
     border: 1px solid #e0e0e0;
     transform: translate(300px, 80px)
   }
-  
+
   @keyframes rotate {
     to {
       stroke-dashoffset: 0;

@@ -2,6 +2,8 @@ import "./Home.css"
 import { ReactComponent as Linkedin } from '../media/linkedin.svg';
 import { ReactComponent as Github } from '../media/github.svg';
 import { ReactComponent as Instagram } from '../media/instagram.svg';
+import { TypeAnimation } from 'react-type-animation';
+
 
 const Home: React.FC = () => {
     return (
@@ -9,10 +11,8 @@ const Home: React.FC = () => {
   
         <div className="background">
           <div className="orbits">
-          <svg className='orbits-animator'>
-              <ellipse className='outer-orbit-1' cx="0" cy="0" rx="450" ry="325" />
-              <ellipse className='inner-orbit-1' cx="0" cy="0" rx="290" ry="175" />
-            </svg>
+            <div className="outer-orbit"></div>
+            <div className="inner-orbit"></div>
           </div>
           <div className='saturn'>
             <circle className='saturn-body' r="80" />
@@ -28,7 +28,23 @@ const Home: React.FC = () => {
           <h1 className="main-header-greeting">kamusta!</h1>
           </div>
           <h2 className="sub-header">
-            i’m juan lucas, a computer science major @ uc berkeley
+          i’m juan lucas
+            <TypeAnimation 
+              sequence={[
+                2000,
+                ", a computer science major @ uc berkeley",
+                1000, 
+                ", an enthusiast in books, movies, art, and music", 
+                2000, 
+                ", a proud pinoy 🇵🇭", 
+                2000, 
+                ", a",
+                500,
+                ", and it's so nice to meet you! :)",
+              ]}
+              cursor={true}
+              deletionSpeed={90}
+            />
           </h2>
           <div className="socials">
             <a href="https://www.linkedin.com/in/juanlucasumali/" target="_blank"><Linkedin className="linkedin" /></a>
