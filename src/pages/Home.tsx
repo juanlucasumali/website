@@ -13,8 +13,10 @@ const Home: React.FC = () => {
             <div className="inner-orbit"></div>
           </div>
           <div className='saturn'>
-            <div className='saturn-body'></div>
-            <div className='saturn-rings'></div>
+            <circle className='saturn-body' r="80" />
+            <svg className='saturn-ring-animator'>
+              <ellipse className='saturn-ring' cx="0" cy="0" rx="300" ry="80" />
+            </svg>
           </div>
         </div>
   
