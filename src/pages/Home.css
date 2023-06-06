@@ -79,7 +79,41 @@
   }
   
   .orbits {
-    transform: translate(280px, 550px);
+    transform: translate(-300px, 200px);
+    scale: 130%;
+  }
+
+  .orbits-animator {
+    width: 1000px;
+    height: 1000px;
+    transform: translate(0px, 0px) rotate(-310deg);
+    fill: white;
+    stroke: #e0e0e0;
+    stroke-width: 1;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 2000;
+    animation: rotate 10s linear infinite;
+    animation-iteration-count: infinite;
+    z-index: -1;
+  }
+  
+  .outer-orbit-1 {
+    border-radius: 50%;
+    border: 1px solid #e0e0e0;
+    transform: translate(500px, 350px);
+    z-index: -3;
+  }
+  
+  .inner-orbit-1 {
+    border-radius: 50%;
+    border: 1px solid #e0e0e0;
+    transform: translate(500px, 350px);
+  }
+  
+  @keyframes rotate {
+    to {
+      stroke-dashoffset: 0;
+    }
   }
   
   .outer-orbit {
@@ -102,7 +136,7 @@
   }
   
   .saturn {
-    transform: translate(1150px, 350px)
+    transform: translate(1150px, -600px)
   }
   
   .saturn-body {

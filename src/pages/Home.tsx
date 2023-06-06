@@ -9,8 +9,10 @@ const Home: React.FC = () => {
   
         <div className="background">
           <div className="orbits">
-            <div className="outer-orbit"></div>
-            <div className="inner-orbit"></div>
+          <svg className='orbits-animator'>
+              <ellipse className='outer-orbit-1' cx="0" cy="0" rx="450" ry="325" />
+              <ellipse className='inner-orbit-1' cx="0" cy="0" rx="290" ry="175" />
+            </svg>
           </div>
           <div className='saturn'>
             <circle className='saturn-body' r="80" />
