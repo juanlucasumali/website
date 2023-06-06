@@ -5,7 +5,7 @@ import { ReactComponent as Instagram } from '../media/instagram.svg';
 
 const Home: React.FC = () => {
     return (
-      <div>
+      <div className="home-page">
   
         <div className="background">
           <div className="orbits">

@@ -37,15 +37,16 @@ import Home from './pages/Home';
 function App() {
   return (
     <div>
-
       <div className="background">
         <div className="orbits">
           <div className="outer-orbit"></div>
           <div className="inner-orbit"></div>
         </div>
         <div className='saturn'>
-          <div className='saturn-body'></div>
-          <div className='saturn-rings'></div>
+            <svg className='saturn-holder'>
+              <div className='saturn-body'></div>
+              <ellipse className='saturn-ring' cx="0" cy="0" rx="300" ry="80" />
+            </svg>
         </div>
       </div>
 
