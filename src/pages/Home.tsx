@@ -31,7 +31,7 @@ const Home: React.FC = () => {
           i’m juan lucas
             <TypeAnimation 
               sequence={[
-                2000,
+                3000,
                 ", a computer science major @ uc berkeley",
                 1000, 
                 ", an enthusiast in books, movies, art, and music", 
