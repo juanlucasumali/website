@@ -11,6 +11,7 @@ const Home: React.FC = () => {
     return (
       <div className="home-page">
   
+        {/* turn this into an adobe svg thingie */}
         <div className="background">
           <div className="orbits">
             <div className="outer-orbit"></div>

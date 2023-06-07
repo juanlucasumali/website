@@ -13,11 +13,12 @@ function CS() {
   return (
     <div className="cs-page">
       <div className="experiences">
+        {/* have a little introduction here */}
         <div className='experiences-header'>
           <h1> experiences </h1>
         </div>
         <div className="experiences-gallery">
-          <Grid container spacing={2}>
+          <Grid container spacing={5}>
             {boxData.map((data, index) => (
               <BoxComponent key={index} {...data} />
             ))}
