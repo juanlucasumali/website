@@ -1,6 +1,6 @@
 import './App.css';
 import Home from './pages/Home';
-import CS from './pages/CS';
+import Software from './pages/Software';
 import Art from './pages/Art';
 
 import * as React from 'react';
@@ -24,7 +24,7 @@ import Button from '@mui/material/Button';
 const drawerWidth = 240;
 const navItems = [
   { text: '👋🏽', link: '/' },
-  { text: '💻', link: '/cs' },
+  { text: '💻', link: '/software' },
   { text: '🎞', link: '/art' },
 ];
 
@@ -95,7 +95,7 @@ function App() {
       <Box component="main" sx={{ p: 3 }}>
       <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/cs" element={<CS />} />
+          <Route path="/software" element={<Software />} />
           <Route path="/art" element={<Art />} />
         </Routes>
       </Box>

@@ -1,0 +1,27 @@
+
+@font-face {
+    font-family: 'Circular Std Book';
+    font-weight: bold;
+    src: url('/Users/juanlucasumali/Desktop/personal website/website/public/fonts/circular-std-font-family/CircularStd-Book.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Circular Std Book Italic';
+    font-weight: bold;
+    src: url('/Users/juanlucasumali/Desktop/personal website/website/public/fonts/circular-std-font-family/CircularStd-BookItalic.ttf') format('truetype');
+  }
+
+.MuiPaper-root {
+    /* padding: 10px; */
+    /* padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px; */
+  }
+
+.box-headers {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    /* margin-top: -60px;
+    transform: translateY(50px); */
+}

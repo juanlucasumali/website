@@ -6,7 +6,7 @@ import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 import { styled } from '@mui/material/styles';
-import './BoxComponent.css';
+import './ExperiencesCard.css';
 
 interface BoxProps {
   image: string;
@@ -22,7 +22,7 @@ const modalStyle = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 400,
+  width: 600,
   bgcolor: 'background.paper',
   border: '2px solid #000',
   boxShadow: 24,
@@ -103,7 +103,7 @@ const GridItem = styled(Card)(({ theme }) => ({
   },
 }));
 
-export default function BoxComponent({ image, imageWidth, imageHeight, header, subheader, description }: BoxProps) {
+export default function ExperiencesCard({ image, imageWidth, imageHeight, header, subheader, description }: BoxProps) {
 
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);

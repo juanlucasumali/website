@@ -47,6 +47,7 @@ const Home: React.FC = () => {
               deletionSpeed={90}
             />
           </h2>
+          {/* TODO: Include resume pdf thing */}
           <div className="socials">
             <a href="https://www.linkedin.com/in/juanlucasumali/" target="_blank"><Linkedin className="linkedin" /></a>
             <a href="https://github.com/juanlucasumali/" target="_blank"><Github className="github" /></a>
