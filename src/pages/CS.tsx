@@ -1,24 +1,38 @@
 import "./CS.css"
+import BoxComponent from "../components/BoxComponent";
+import { Grid } from '@mui/material';
+
+const boxData = [
+    { image: '/sfcm_logo.png', imageWidth: '100%',  imageHeight: 150 },
+    { image: '/astics_logo.png', imageWidth: '100%',  imageHeight: 150},
+    { image: '/cityu_logo.png', imageWidth: '100%',  imageHeight: 150},
+    // add more data objects as needed
+  ];
 
 function CS() {
-    return (
-        <div className="cs-page">
-            <div className="experiences">
-                <div className='experiences-header'>
-                    <h1> experiences </h1>
-                </div>
-                <div className="experiences-gallery">
-                </div>
-            </div>
-            <div className="projects"> 
-                <div className='projects-header'>
-                    <h1> projects </h1>
-                </div>
-                <div className="projects-gallery">
-            </div>
-            </div>
-
+  return (
+    <div className="cs-page">
+      <div className="experiences">
+        <div className='experiences-header'>
+          <h1> experiences </h1>
         </div>
-    );
+        <div className="experiences-gallery">
+          <Grid container spacing={2}>
+            {boxData.map((data, index) => (
+              <BoxComponent key={index} {...data} />
+            ))}
+          </Grid>
+        </div>
+      </div>
+      <div className="projects"> 
+        <div className='projects-header'>
+          <h1> projects </h1>
+        </div>
+        <div className="projects-gallery">
+        </div>
+      </div>
+    </div>
+  );
 }
+
 export default CS;
