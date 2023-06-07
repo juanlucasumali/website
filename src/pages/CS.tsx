@@ -1,11 +1,12 @@
 import "./CS.css"
 import BoxComponent from "../components/BoxComponent";
+
 import { Grid } from '@mui/material';
 
 const boxData = [
-    { header: 'SFCM', subheader: 'Statistics Dashboard', image: '/sfcm_logo.png', imageWidth: '100%',  imageHeight: 150 },
-    { header: 'Astics', subheader: 'Check-In UI', image: '/astics_logo.png', imageWidth: '100%',  imageHeight: 150},
-    { header: 'CityU', subheader: 'Genetic Analysis', image: '/cityu_logo.png', imageWidth: '100%',  imageHeight: 150},
+    { header: 'SFCM', subheader: 'Statistics Dashboard', description: '', image: '/sfcm_logo.png', imageWidth: '100%',  imageHeight: 150 },
+    { header: 'Astics', subheader: 'Check-In UI', description: '', image: '/astics_logo.png', imageWidth: '100%',  imageHeight: 150},
+    { header: 'CityU', subheader: 'Genetic Analysis', description: '', image: '/cityu_logo.png', imageWidth: '100%',  imageHeight: 150},
     // add more data objects as needed
   ];
 function CS() {

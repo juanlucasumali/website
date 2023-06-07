@@ -34,16 +34,14 @@ const Home: React.FC = () => {
           i’m juan lucas
             <TypeAnimation 
               sequence={[
-                3000,
+                2000,
                 ", a computer science major @ uc berkeley",
                 1000, 
-                ", an enthusiast in all things art", 
+                ", a guy who loves art", 
                 1000, 
                 ", a proud pinoy 🇵🇭", 
                 1000, 
-                ", and",
-                500,
-                ", and it's so nice to meet you :)",
+                " — let's continue the conversation below ;)",
               ]}
               cursor={true}
               deletionSpeed={90}

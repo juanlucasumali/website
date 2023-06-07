@@ -1,4 +1,10 @@
+import * as React from 'react';
 import { Card, CardContent, Grid, Typography } from '@mui/material';
+import Button from '@mui/material/Button';
+import Backdrop from '@mui/material/Backdrop';
+import Box from '@mui/material/Box';
+import Modal from '@mui/material/Modal';
+import Fade from '@mui/material/Fade';
 import { styled } from '@mui/material/styles';
 import './BoxComponent.css';
 
@@ -8,7 +14,20 @@ interface BoxProps {
   imageHeight?: any;
   header?: string;
   subheader?: string;
+  description: string;
 }
+
+const modalStyle = {
+  position: 'absolute' as 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
+};
 
 const BoxHeader = styled(Typography)({
   display: 'grid',
@@ -32,13 +51,19 @@ const Header = styled(Typography)({
   fontWeight: 'bold',
   fontSize: '2rem',
   margin: '0',
-  fontFamily: 'Circular Std Book',
+  fontFamily: 'Circular Std Black',
 });
 
 const Subheader = styled(Typography)({
   fontSize: '0.8rem',
   margin: '0',
   fontFamily: 'Circular Std Book Italic',
+});
+
+const Description = styled(Typography)({
+  fontSize: '1rem',
+  margin: '0',
+  fontFamily: 'Circular Std Book',
 });
 
 const Image = styled(Typography)({
@@ -51,12 +76,12 @@ const GridItem = styled(Card)(({ theme }) => ({
   position: 'relative', // add position:relative to the GridItem to make it the containing block for the absolutely positioned BoxHeader
   backgroundColor: 'white',
   textAlign: 'center',
-  boxShadow: '12px 12px 0px 0px #212121',
+  boxShadow: '10px 10px 0px 0px #212121',
   border: '6px solid #212121',
   borderRadius: 0,
   transition: 'box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out',
   '&:hover': {
-    transform: 'translate(12px, 12px)',
+    transform: 'translate(10px, 10px)',
     boxShadow: '0px 0px 0px 0px #212121',
     '& .image': {
       opacity: 0,
@@ -66,9 +91,16 @@ const GridItem = styled(Card)(({ theme }) => ({
     },
   },
 }));
-const BoxComponent = ({ image, imageWidth, imageHeight, header, subheader }: BoxProps) => {
+
+export default function BoxComponent({ image, imageWidth, imageHeight, header, subheader }: BoxProps) {
+
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   return (
     <Grid item xs="auto">
+      <Button onClick={handleOpen} disableRipple style={{ backgroundColor: 'transparent' }} >
       <GridItem raised>
         <BoxHeader className="box-headers">
           <div>
@@ -90,8 +122,23 @@ const BoxComponent = ({ image, imageWidth, imageHeight, header, subheader }: Box
           </Image>
         </CardContent>
       </GridItem>
+      </Button>
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        open={open}
+        onClose={handleClose}
+        closeAfterTransition
+      >
+        <Fade in={open}>
+          <Box sx={modalStyle}>
+          <Header className='box-header' >{header}</Header>
+            <Subheader className='box-subheader' >{subheader}</Subheader>
+            <Button onClick={handleClose} disableRipple style={{ backgroundColor: '#212121', color: "white", fontWeight:"bold" }}>Done</Button>
+          </Box>
+        </Fade>
+      </Modal>
+      
     </Grid>
   );
-};
-
-export default BoxComponent;
+}
