@@ -71,6 +71,17 @@ const Image = styled(Typography)({
   transition: 'opacity 0.1s ease-in-out',
 });
 
+interface NewlineTextProps {
+  text: string;
+}
+
+function NewlineText(props: NewlineTextProps) {
+  const text = props.text;
+  const newText = text.split('\n').map((str: string) => <p>{str}</p>);
+
+  return <>{newText}</>;
+}
+
 
 const GridItem = styled(Card)(({ theme }) => ({
   position: 'relative', // add position:relative to the GridItem to make it the containing block for the absolutely positioned BoxHeader
@@ -92,7 +103,7 @@ const GridItem = styled(Card)(({ theme }) => ({
   },
 }));
 
-export default function BoxComponent({ image, imageWidth, imageHeight, header, subheader }: BoxProps) {
+export default function BoxComponent({ image, imageWidth, imageHeight, header, subheader, description }: BoxProps) {
 
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
@@ -134,6 +145,8 @@ export default function BoxComponent({ image, imageWidth, imageHeight, header, s
           <Box sx={modalStyle}>
           <Header className='box-header' >{header}</Header>
             <Subheader className='box-subheader' >{subheader}</Subheader>
+            <hr style={{ border: 'none', height: '1px', backgroundColor: '#ccc' }} />
+            <Description className='box-description'>{<NewlineText text={description} />}</Description>
             <Button onClick={handleClose} disableRipple style={{ backgroundColor: '#212121', color: "white", fontWeight:"bold" }}>Done</Button>
           </Box>
         </Fade>

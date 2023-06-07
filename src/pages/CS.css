@@ -27,6 +27,14 @@
 .cs-page {
     margin-left: 70px;
     margin-right: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.experiences,
+.projects {
+  margin-bottom: 5rem; /* Add some space between sections */
 }
 
 .experiences-header {
