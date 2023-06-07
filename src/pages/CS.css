@@ -1,4 +1,20 @@
+@font-face {
+    font-family: 'Circular Std Black';
+    font-weight: bold;
+    src: url('/Users/juanlucasumali/Desktop/personal website/website/public/fonts/circular-std-font-family/CircularStd-Black.ttf') format('truetype');
+}
+
 .cs-page {
     margin-left: 70px;
     margin-right: 70px;
+}
+
+.experiences-header {
+    font-family: 'Circular Std Black', sans-serif;
+    font-weight: bold;
+}
+
+.projects-header {
+    font-family: 'Circular Std Black', sans-serif;
+    font-weight: bold;
 }
