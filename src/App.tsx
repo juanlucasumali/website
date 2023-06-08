@@ -4,7 +4,7 @@ import Software from './pages/Software';
 import Art from './pages/Art';
 import * as React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Link, useLocation } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -18,6 +18,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 
+
 const drawerWidth = 240;
 const navItems = [
   { text: '👋🏽', link: '/' },
@@ -27,6 +28,7 @@ const navItems = [
 
 function App() {
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const basename = '/website'; 
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -53,7 +55,7 @@ function App() {
   );
 
   return (
-    <Router>
+    <Router basename={basename}>
       <CssBaseline />
       <AppBar position="fixed" sx={{ backgroundColor: 'transparent', boxShadow: 'none', right: 0 }}>
         <Toolbar sx={{ justifyContent: 'flex-end' }}>
