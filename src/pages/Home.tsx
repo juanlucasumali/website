@@ -3,9 +3,6 @@ import { ReactComponent as Linkedin } from '../media/linkedin.svg';
 import { ReactComponent as Github } from '../media/github.svg';
 import { ReactComponent as Instagram } from '../media/instagram.svg';
 import { TypeAnimation } from 'react-type-animation';
-import { Container } from '@mui/material';
-
-
 
 const Home: React.FC = () => {
     return (

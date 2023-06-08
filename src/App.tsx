@@ -2,7 +2,6 @@ import './App.css';
 import Home from './pages/Home';
 import Software from './pages/Software';
 import Art from './pages/Art';
-
 import * as React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
