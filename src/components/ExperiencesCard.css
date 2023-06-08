@@ -2,13 +2,13 @@
 @font-face {
     font-family: 'Circular Std Book';
     font-weight: bold;
-    src: url('/Users/juanlucasumali/Desktop/personal website/website/public/fonts/circular-std-font-family/CircularStd-Book.ttf') format('truetype');
+    src: url('/Users/juanlucasumali/Desktop/personal_website/website/public/fonts/circular-std-font-family/CircularStd-Book.ttf') format('truetype');
   }
 
   @font-face {
     font-family: 'Circular Std Book Italic';
     font-weight: bold;
-    src: url('/Users/juanlucasumali/Desktop/personal website/website/public/fonts/circular-std-font-family/CircularStd-BookItalic.ttf') format('truetype');
+    src: url('/Users/juanlucasumali/Desktop/personal_website/website/public/fonts/circular-std-font-family/CircularStd-BookItalic.ttf') format('truetype');
   }
 
 .MuiPaper-root {
