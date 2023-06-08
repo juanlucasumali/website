@@ -17,6 +17,7 @@ import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+import { HashRouter } from 'react-router-dom';
 
 
 const drawerWidth = 240;
@@ -55,7 +56,7 @@ function App() {
   );
 
   return (
-    <Router basename={basename}>
+    <HashRouter>
       <CssBaseline />
       <AppBar position="fixed" sx={{ backgroundColor: 'transparent', boxShadow: 'none', right: 0 }}>
         <Toolbar sx={{ justifyContent: 'flex-end' }}>
@@ -98,7 +99,7 @@ function App() {
           <Route path="/art" element={<Art />} />
         </Routes>
       </Box>
-    </Router>
+    </HashRouter>
   );
 }
 
