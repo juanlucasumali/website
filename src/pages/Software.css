@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Circular Std Black';
     font-weight: bold;
-    src: url('/Users/juanlucasumali/Desktop/personal website/website/public/fonts/circular-std-font-family/CircularStd-Black.ttf') format('truetype');
+    src: url('/Users/juanlucasumali/Desktop/personal_website/website/public/fonts/circular-std-font-family/CircularStd-Black.ttf') format('truetype');
 }
 
 @keyframes fadeInUp {
