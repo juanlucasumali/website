@@ -1,0 +1,58 @@
+@font-face {
+    font-family: 'Circular Std Black';
+    font-weight: bold;
+    src: url('/Users/juanlucasumali/Desktop/personal website/website/public/fonts/circular-std-font-family/CircularStd-Black.ttf') format('truetype');
+}
+
+@keyframes fadeInUp {
+    0% {
+      transform: translateY(5%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+.cs-page {
+    margin-left: 70px;
+    margin-right: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.experiences,
+.projects {
+  margin-bottom: 5rem; /* Add some space between sections */
+}
+
+.experiences-header {
+    font-family: 'Circular Std Black', sans-serif;
+    font-weight: bold;
+    animation: 1.5s fadeInUp;
+}
+
+.experiences-gallery {
+    animation: 1.5s fadeIn;
+}
+
+.projects-header {
+    font-family: 'Circular Std Black', sans-serif;
+    font-weight: bold;
+    animation: 1.5s fadeInUp;
+}
+
+.projects-gallery {
+    animation: 1.5s fadeIn;
+}
