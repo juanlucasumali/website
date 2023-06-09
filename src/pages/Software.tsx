@@ -19,9 +19,9 @@ const experiencesData = [
   ];
 
   const projectsData = [
-    { image: `/chord_progression_image.png`, header: 'Chord Progression Generator', subheader: 'JavaScript, HTML, CSS', link: 'https://github.com/juanlucasumali/chord-progression-generator-3000', description: `• Developed a chord progression generator that allows users to generate and customize chord progressions for music composition. 
+    { image: '/chord_progression_image.png', header: 'Chord Progression Generator', subheader: 'JavaScript, HTML, CSS', link: 'https://github.com/juanlucasumali/chord-progression-generator-3000', description: `• Developed a chord progression generator that allows users to generate and customize chord progressions for music composition. 
     • Created and deployed the website using HTML, CSS, and JavaScript.`, imageWidth: '100%',  imageHeight: 300 },
-    { image: `/ml_python_implementation.png`, header: 'Python Implementation of ML Models', subheader: 'Python', link: 'https://github.com/juanlucasumali/KNN-from-scratch', description: `• Implemented KNN and decision tree machine learning models from scratch using Python.
+    { image: '/ml_python_implementation.png', header: 'Python Implementation of ML Models', subheader: 'Python', link: 'https://github.com/juanlucasumali/KNN-from-scratch', description: `• Implemented KNN and decision tree machine learning models from scratch using Python.
     • Successfully tested and validated them on an iris species classification dataset.
     • Optimized the models for accuracy and performance through hyperparameter tuning and feature selection.`, imageWidth: '100%',  imageHeight: 250 },
     { image: `/evolving_car_ais.png`, header: 'Neuroevolution Simulation of Self-Driving Car AIs in Unity 3D', subheader: 'C#, Unity 3D, ML-Agents Toolkit', link: '', description: `• Simulated neuroevolution in Unity 3D using C# and Unity ML-Agents toolkit. 

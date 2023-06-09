@@ -1,5 +1,5 @@
 {
-  "homepage": "https://juanlucasumali.github.io/website",
+  "homepage": "https://www.juanlucasumali.com/",
   "name": "website",
   "version": "0.1.0",
   "private": true,
@@ -25,6 +25,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
@@ -51,7 +53,6 @@
     ]
   },
   "devDependencies": {
-    "@types/react": "^18.2.9",
-    "react-scripts": "^5.0.1"
+    "gh-pages": "^5.0.0"
   }
 }
