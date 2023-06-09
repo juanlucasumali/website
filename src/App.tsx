@@ -24,7 +24,7 @@ import Typography from '@mui/material/Typography';
 const drawerWidth = 240;
 const navItems = [
   { text: '👋🏽', link: '/' },
-  { text: '💻', link: '/software' },
+  { text: '💻', link: '/software/' },
   { text: '🎞', link: '/art' },
 ];
 
@@ -56,7 +56,7 @@ function App() {
   );
 
   return (
-    <Router>
+    <Router >
       <CssBaseline />
       <AppBar position="fixed" sx={{ backgroundColor: 'transparent', boxShadow: 'none', right: 0 }}>
         <Toolbar sx={{ justifyContent: 'flex-end' }}>
