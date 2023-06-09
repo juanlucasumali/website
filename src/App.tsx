@@ -5,7 +5,7 @@ import Art from './pages/Art';
 
 import * as React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { HashRouter, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -19,7 +19,7 @@ import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
+
 
 const drawerWidth = 240;
 const navItems = [
@@ -56,7 +56,7 @@ function App() {
   );
 
   return (
-    <HashRouter>
+    <Router>
       <CssBaseline />
       <AppBar position="fixed" sx={{ backgroundColor: 'transparent', boxShadow: 'none', right: 0 }}>
         <Toolbar sx={{ justifyContent: 'flex-end' }}>
@@ -99,7 +99,7 @@ function App() {
           <Route path="/art" element={<Art />} />
         </Routes>
       </Box>
-    </HashRouter>
+    </Router>
   );
 }
 
