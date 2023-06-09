@@ -3,9 +3,6 @@ import { ReactComponent as Linkedin } from '../media/linkedin.svg';
 import { ReactComponent as Github } from '../media/github.svg';
 import { ReactComponent as Instagram } from '../media/instagram.svg';
 import { TypeAnimation } from 'react-type-animation';
-import { Container } from '@mui/material';
-
-
 
 const Home: React.FC = () => {
     return (
@@ -37,11 +34,11 @@ const Home: React.FC = () => {
                 2000,
                 ", a computer science major @ uc berkeley",
                 1000, 
-                ", a guy who loves art", 
+                ", an enthusiast for the arts", 
                 1000, 
                 ", a proud pinoy 🇵🇭", 
                 1000, 
-                " — let's continue the conversation below ;)",
+                " — let me know who you are below ;)",
               ]}
               cursor={true}
               deletionSpeed={90}
